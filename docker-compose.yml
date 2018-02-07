@@ -8,4 +8,4 @@ services:
     working_dir: /app
     ports: 
       - 8888:8888
-    command: bash -c "/opt/conda/bin/conda install jupyter -y --quiet && source activate pyfinance && /opt/conda/bin/jupyter notebook"
+    command: bash -c "/opt/conda/bin/conda install jupyter -y --quiet && conda env create -f environment.yml && source activate pyfinance && /opt/conda/bin/jupyter notebook"
