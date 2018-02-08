@@ -2,7 +2,7 @@ name: pyfinance
 channels:
 - defaults
 dependencies:
-- appnope=0.1.0=py36_0
+# - appnope=0.1.0=py36_0
 - bleach=1.5.0=py36_0
 - cycler=0.10.0=py36_0
 - decorator=4.1.2=py36_0

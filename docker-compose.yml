@@ -2,10 +2,10 @@ version: '3'
 
 services:
   finance:
-    image: continuumio/anaconda3
+    build: .
     volumes: 
       - .:/app
     working_dir: /app
     ports: 
       - 8888:8888
-    command: bash -c "/opt/conda/bin/conda install jupyter -y --quiet && conda env create -f environment.yml && source activate pyfinance && /opt/conda/bin/jupyter notebook"
+    command: bash -c "/root/anaconda3/bin/conda env create -f ./maclinuxenvironment.yml && source /root/anaconda3/bin/activate pyfinance && /root/anaconda3/bin/jupyter notebook --ip='*' --port=8888 --no-browser --allow-root"
